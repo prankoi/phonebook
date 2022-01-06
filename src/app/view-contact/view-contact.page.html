@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>view-contact</ion-title>
+  <ion-toolbar *ngIf="contact">
+    <ion-title>{{contact.firstName}} {{contact.lastName}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="contact">
+  <ion-item>{{contact.mobile}}</ion-item>
+  <ion-item>{{contact.email}}</ion-item>
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="deleteContact()" color="danger">
+    <ion-icon name="trash"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

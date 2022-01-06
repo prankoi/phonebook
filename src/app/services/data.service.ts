@@ -46,6 +46,12 @@ export class DataService {
     return contacts;
   }
 
+  public async view(key: string): Promise<Contact>{
+    let contact: Contact;
+    contact = await this.storage.get(key);
+    return contact;
+  }
+
   public async create(key: string, contact: Contact){
     console.log("Contact created: ", contact);
     return await this.storage.set(key, contact);
