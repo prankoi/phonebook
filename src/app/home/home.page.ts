@@ -21,18 +21,4 @@ export class HomePage implements OnInit{
       ev.detail.complete();
     }, 3000);
   }
-
-  public async createContact(firstName: string, lastName: string, mobile: string, email: string){
-    let key = await this._dataService.generateKey();
-    let contact = {
-      key: key,
-      firstName: firstName,
-      lastName: lastName,
-      mobile: mobile,
-      email: email
-    }
-
-    await this._dataService.create(key, contact);
-    this.contacts = await this._dataService.read();
-  }
 }
