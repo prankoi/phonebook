@@ -1,0 +1,11 @@
+<ion-item *ngIf="contact" [routerLink]="'/contact/' + contact.key" [detail]="false">
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ contact.firstName }}
+      <span class="date">
+        <ion-note>{{ contact.mobile }}</ion-note>
+      </span>
+    </h2>
+    <h3>{{ contact.email }}</h3>
+  </ion-label>
+</ion-item>
