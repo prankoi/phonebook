@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'contact/:key',
     loadChildren: () => import('./view-contact/view-contact.module').then( m => m.ViewContactPageModule)
+  },
+  {
+    path: 'edit-contact/:key',
+    loadChildren: () => import('./edit-contact/edit-contact.module').then( m => m.EditContactPageModule)
   }
 ];
 

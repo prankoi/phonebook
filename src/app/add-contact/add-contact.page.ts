@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, Contact } from '../services/data.service';
+import { DataService } from '../services/data.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
