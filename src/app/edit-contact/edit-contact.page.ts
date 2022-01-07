@@ -43,10 +43,10 @@ export class EditContactPage implements OnInit {
     }
 
     await this._dataService.update(contact);
+    window.location.href="/";
   }
 
   onSubmit() {
     this.editContact();
-    window.location.href="/";
   }
 }

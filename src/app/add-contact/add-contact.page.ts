@@ -34,10 +34,10 @@ export class AddContactPage implements OnInit {
     }
 
     await this._dataService.create(key, contact);
+    window.location.href="/";
   }
 
   public onSubmit() {
     this.createContact();
-    window.location.href="/";
   }
 }
